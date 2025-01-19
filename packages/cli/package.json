@@ -1,0 +1,26 @@
+{
+  "name": "@visor/cli",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "visor": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "postbuild": "node scripts/copy-ui.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22",
+    "@types/opener": "^1.4.3",
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@visor/server": "*",
+    "commander": "^13.0.0",
+    "fs-extra": "^11.3.0",
+    "opener": "^1.5.2"
+  }
+}

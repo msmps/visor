@@ -1,0 +1,21 @@
+{
+  "name": "visor",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/ui",
+    "packages/server",
+    "packages/cli"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "clean": "find packages \\( -name 'dist' -type d -o -name '*.tsbuildinfo' \\) -prune -exec rm -rf {} +",
+    "dev": "npm run dev --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "typescript": "^5"
+  }
+}
